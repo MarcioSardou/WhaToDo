@@ -4,8 +4,9 @@
   "description": "Small project using technologies recently learned in rocketseat training environment.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --mode=development",
-    "start": "webpack --mode=development -w"
+    "build-dev": "webpack -w --mode=development",
+    "build-prd": "webpack --mode production",
+    "serve": "webpack-dev-server --open --colors --progress --mode development --inline --content-base ./public"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
@@ -14,6 +15,7 @@
     "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
