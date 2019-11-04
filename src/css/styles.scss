@@ -1,5 +1,50 @@
-$btn-color: green;
+$cor-fundo: gray;
+$cor-title: #8f19dd;
+* {
+   background-color: $cor-fundo;
+}
 
-button {
-   background-color: $btn-color;
+.inner {
+   position: absolute;
+   top: 20%;
+   left: 40%;
+   
+   &__container {
+      border: 2px solid darkgrey;
+      padding: 20px;
+      border-radius: 0.9em;
+   }
+
+   &__title {
+      font-weight: bold;
+      font-size: 26px;
+      color: $cor-title;
+   }
+   &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      &__text {
+         background-color: white;
+         margin:0.6em 0.3em 0.3em 0;
+      }
+      &__button{
+         border: 0;
+         display:inline-block;
+         padding:0.7em 1.4em;
+         margin:0.6em 0.3em 0.3em 0;
+         border-radius:0.15em;
+         box-sizing: border-box;
+         text-decoration:none;
+         font-family:'Roboto',sans-serif;
+         text-transform:uppercase;
+         font-weight:400;
+         color:#FFFFFF;
+         background-color:#8f19dd;
+         box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+         text-align:center;
+         position:relative;
+      }
+   }
 }

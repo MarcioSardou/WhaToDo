@@ -45,11 +45,5 @@ module.exports = {
   ]
 }
 
-
-
-// devServer: {
-//   publicPath: "/",
-//   contentBase: "./public",
-//   hot: true
 //ENTRY NÃO É MAIS NECESSÁRIO A PARTIR DA V4, POIS ELE PROCURA UMA PAST SRC E UM ARQUIVO INDEX.JS DENTRO DELA
 // },
