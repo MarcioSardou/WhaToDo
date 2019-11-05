@@ -5,9 +5,11 @@ $cor-title: #8f19dd;
 }
 
 .inner {
+   flex-direction: column;
    position: absolute;
-   top: 20%;
+   display: flex;
    left: 40%;
+   top: 20%;
    
    &__container {
       border: 2px solid darkgrey;
@@ -46,5 +48,10 @@ $cor-title: #8f19dd;
          text-align:center;
          position:relative;
       }
+   }
+   &__list {
+      margin-top: 50px;
+      border: 1px solid darkgrey;
+      padding: 10px;
    }
 }

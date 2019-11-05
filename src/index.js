@@ -5,13 +5,13 @@ const inputText = document.getElementById('inpTxt')
 const clickBtn = document.getElementById("btn")
 const ulList = document.getElementById("list")
 
-var todos = [
-   'PEIDAR',
-   'amar'
-]
+console.log(clickBtn);
+
+const todos = [] 
 
 function renderTodos() {
-   
+   ulList.innerHTML = '';
+
    todos.forEach( todo => {
       let liElement = document.createElement('li')
       liElement.classList.add('inner__list__element')
@@ -23,15 +23,14 @@ function renderTodos() {
 }
 
 function getInputText() {
-   todos.push(inputText.value)
-   inputText.value = ''
-   renderTodos()
+  todos.push(inputText.value)
+  inputText.value = '';
+  renderTodos()
 }
 
 clickBtn.addEventListener('click',(e) => {
-   e.preventDefault()
-   renderTodos()
-   getInputText()
+  e.preventDefault()
+  getInputText()
 })
 
 

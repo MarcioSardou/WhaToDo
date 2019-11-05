@@ -4,9 +4,7 @@
   "description": "Small project using technologies recently learned in rocketseat training environment.",
   "main": "index.js",
   "scripts": {
-    "build-dev": "webpack -w --mode=development",
-    "build-prd": "webpack --mode production",
-    "serve": "webpack-dev-server --open --colors --progress --mode development --inline --content-base ./public"
+    "dev": "webpack-dev-server --open --colors --progress --mode development --content-base ./public"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
