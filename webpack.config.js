@@ -7,8 +7,8 @@ module.exports = {
   entry: './src/index.js',
   
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname,'dist')
+    path: path.resolve(__dirname,'dist'),
+    filename: 'main.js'
   },
   
   module: {
@@ -47,11 +47,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),
-  //   new HtmlWebpackPlugin({
-  //     template:path.resolve(__dirname, 'public/index.html'),
-  //     hash: true
-  //   })
-  // ]
+     new HtmlWebpackPlugin({
+      filename:'public/index.html'
+     })
+   ]
 }
 
 //ENTRY NÃO É MAIS NECESSÁRIO A PARTIR DA V4, POIS ELE PROCURA UMA PAST SRC E UM ARQUIVO INDEX.JS DENTRO DELA
