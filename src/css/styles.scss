@@ -53,5 +53,20 @@ $cor-title: #8f19dd;
       margin-top: 50px;
       border: 1px solid darkgrey;
       padding: 10px;
+
+      &__element {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 15px;
+         border: 1px solid black;
+         padding: 5px;
+         background-color: darkgray;
+         box-shadow: inset 0 0 1em mediumpurple, 0 0 1em mediumpurple;
+
+         &__delete {
+            background-color: unset;
+            text-decoration: none;
+         }
+      }
    }
 }

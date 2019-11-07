@@ -1,7 +1,8 @@
-// const webpack = require('webpack');
+const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 
 module.exports = {
   entry: './src/index.js',
@@ -24,15 +25,6 @@ module.exports = {
         }
       },
       {
-        test: /\.(html)$/,
-        use: {
-          loader: 'html-loader',
-          options: {
-            attrs: [':data-src']
-          }
-        }
-      },
-      {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
@@ -42,7 +34,10 @@ module.exports = {
       }
     ]
   },
-  
+    devServer: {
+    contentBase: ['./public'],
+    watchContentBase: true
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
@@ -52,6 +47,3 @@ module.exports = {
      })
    ]
 }
-
-//ENTRY NÃO É MAIS NECESSÁRIO A PARTIR DA V4, POIS ELE PROCURA UMA PAST SRC E UM ARQUIVO INDEX.JS DENTRO DELA
-// },
