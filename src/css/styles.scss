@@ -12,25 +12,13 @@ $cor-title: #8f19dd;
    top: 20%;
    
    &__container {
-      border: 2px solid darkgrey;
-      padding: 20px;
-      border-radius: 0.9em;
-   }
-
-   &__title {
-      font-weight: bold;
-      font-size: 26px;
-      color: $cor-title;
-   }
-   &__form {
       display: flex;
       flex-direction: column;
       align-items: center;
-    
-      &__text {
-         background-color: white;
-         margin:0.6em 0.3em 0.3em 0;
-      }
+      border: 2px solid darkgrey;
+      padding: 20px;
+      border-radius: 0.9em;
+
       &__button{
          border: 0;
          display:inline-block;
@@ -49,6 +37,23 @@ $cor-title: #8f19dd;
          position:relative;
       }
    }
+
+   &__title {
+      font-weight: bold;
+      font-size: 26px;
+      color: $cor-title;
+   }
+   &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      &__text {
+         background-color: white;
+         margin:0.6em 0.3em 0.3em 0;
+      }
+   }
+   
    &__list {
       margin-top: 50px;
       border: 1px solid darkgrey;
