@@ -30,7 +30,9 @@ function renderTodos() {
     linkElement.classList.add('inner__list__element__delete')
     
     deleteTodo(liElement,linkElement)
-    
+    saveToStorage()
+    removeToStorage(linkElement)
+
     ulList.appendChild(liElement)
     liElement.appendChild(liElementText)
     liElement.appendChild(linkElement)
@@ -41,11 +43,34 @@ function renderTodos() {
 //DELETA OS ELEMENTOS DO ARRAY
 const deleteTodo = (lielement,linkelement) => {
 
-  linkelement.addEventListener('click',(e) =>{
+  linkelement.addEventListener('click',(e) => {
     e.preventDefault();
+    saveToStorage()
     lielement.remove();
   })
 }
+
+//SETA OS ITENS NO LOCALSTORAGE
+function saveToStorage() {
+  localStorage.setItem('tarefa', JSON.stringify(todos))
+
+}
+
+function removeToStorage(deleteButton) {
+  deleteButton.addEventListener('click', () =>{
+    localStorage.getItem('nome', `${JSON.stringify(todos)}`)
+    todos.pop(todos)
+    console.log("Array ta assim: ",todos);
+    
+  })
+}
+// const setLocalStorageData = (inputTextValue) => {
+//   clickBtn.addEventListener('click',(e) =>{
+//     e.preventDefault();
+//     localStorage.setItem('tarefa', JSON.stringify(`${inputTextValue}`))
+//   })
+// }
+
 
 //OUVE O CLICK DO BOTAO E ASSOCIA O CLIQUE A FUNCAO DE ADICIONAR ELEMENTOS
 clickBtn.addEventListener('click',(e) => {
