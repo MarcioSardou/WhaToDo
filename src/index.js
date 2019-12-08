@@ -5,13 +5,18 @@ const inputText = document.getElementById('inpTxt')
 const clickBtn = document.getElementById("btn")
 const ulList = document.getElementById("list")
 
-const todos = []
+const catchTodo = JSON.parse(localStorage.getItem('tarefas'))
+console.log('tarefas',catchTodo);
+
+
+const todos = catchTodo || [];
 
 clickBtn.onclick = 
   function addTodo() {
     todos.push(inputText.value);
     inputText.value = '';
     renderTodos()
+    setLocalStorage()
   }
 
 function renderTodos() {
@@ -42,7 +47,12 @@ function renderTodos() {
 }
 // renderTodos()
 
+function setLocalStorage() {
+  localStorage.setItem('tarefas',JSON.stringify(todos)) 
+}
+
 function deleteTodo(pos) {
   todos.splice(pos, 1)
   renderTodos();
+  setLocalStorage()
 }
